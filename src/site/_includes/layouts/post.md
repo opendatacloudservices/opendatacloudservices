@@ -5,7 +5,7 @@ templateEngineOverride: njk, md
 ---
 
 <p class="date">
-  Posted as an example, on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+  Posted as an example, on <time datetime="{{ date }}">{{ date | date("YYYY-MM-DD") }}</time>
 </p>
 <main>
   {{ content | safe }}

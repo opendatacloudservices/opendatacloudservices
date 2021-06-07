@@ -1,6 +1,6 @@
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-
+const moment = require('moment');
 
 module.exports = function(config) {
 
@@ -12,9 +12,15 @@ module.exports = function(config) {
 
   // Add some utility filters
   config.addFilter("squash", require("./src/utils/filters/squash.js") );
-  config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );
 
+  config.addCollection("posts_en", function (collection) {
+    return collection.getFilteredByGlob("./src/posts/*/en.md");
+  });
 
+  config.addCollection("posts_de", function (collection) {
+    return collection.getFilteredByGlob("./src/posts/*/de.md");
+  });
+  
   // add support for syntax highlighting
   config.addPlugin(syntaxHighlight);
 
@@ -32,9 +38,15 @@ module.exports = function(config) {
       return minified.code;
   });
 
+  config.addNunjucksFilter("date", function (date, format, locale) {
+    locale = locale ? locale : "en";
+    moment.locale(locale);
+    return moment(date).format(format);
+  });
 
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
+  config.addPassthroughCopy("./src/site/fonts");
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;

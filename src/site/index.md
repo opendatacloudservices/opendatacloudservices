@@ -1,8 +1,15 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.<br /> Made by <a href="https://twitter.com/philhawksworth">Phil</a> for <a href="https://twitter.com/philhawksworth">Phil</a>, but perhaps you might also find it useful.
 layout: layouts/base.njk
+title: Home
+locale: en
 ---
+
+<div id="teaser">
+  <div>
+    <h1>Offene Daten finden und nutzen</h1>
+    <h2>Der Weg zu einer einheitlichen Infrastruktur für offene Daten in Deutschland</h2>
+  </div>
+</div>
 
 
 ## This site is a starting point
@@ -27,23 +34,10 @@ The pages found in in the posts
 {%- for page in collections.post -%}
   <li>
     <a href="{{ page.url }}">{{ page.data.title }}</a> -
-    <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+    <time datetime="{{ page.date }}">{{ page.date | date("YYYY-MM-DD") }}</time>
   </li>
 {%- endfor -%}
 </ul>
-
-## Links from an external data source
-
-These links were sourced from [hawksworx.com](https://www.hawksworx.com/feed.json) at build time.
-
-<ul class="listing">
-{%- for item in hawksworx.entries.slice(0,5) -%}
-  <li>
-    <a href="{{ item.link }}">{{ item.title }}</a>
-  </li>
-{%- endfor -%}
-</ul>
-
 
 ## Prerequisite
 

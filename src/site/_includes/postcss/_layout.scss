@@ -1,0 +1,119 @@
+$layout__border-radius: 10px;
+
+@mixin view {
+  background-color: $color__white;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15), 0px 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: $layout__border-radius;
+  padding: 17px 23px;
+  margin:10px;
+}
+
+@mixin button-bright {
+  border-width:0;
+  border-radius: 100px;
+  background-color: $color__accent-brightest;
+  color: $color__accent;
+  cursor: pointer;
+  padding:10px 15px;
+  text-decoration: none;
+  &:hover {
+    color: $color__accent-brightest;
+    background-color: $color__accent;
+  }
+  &.invert{
+    color: $color__accent-brightest;
+    background-color: $color__accent;
+    &:hover{
+      background-color: $color__accent-brightest;
+      color: $color__accent;
+    }
+  }
+}
+
+@mixin button-bright-small {
+  @include button-bright;
+  padding:6px 12px;
+}
+
+@mixin button-light {
+  text-align:left;
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+  color:$color__default-bright;
+  &:hover {
+    color: $color__default-medium;
+  }
+}
+
+/*----- LAYOUT ------*/
+
+.view {
+  @include view;
+}
+
+hr.spacer {
+  height:1px;
+  background:none;
+  border: none;
+  width:100%;
+  clear:both;
+  margin-top:10px;
+}
+
+body>div.hasHeader {
+  padding-top:50px;
+}
+
+button.primary {
+  @include button-bright;
+}
+button.secondary {
+  @include button-light;
+}
+button.stretch{
+  width: 100%;
+  text-align: center;
+}
+
+button.prev, button.next {
+  @include button-bright;
+  text-align:center;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    mask-size: cover;
+    background-color: $color__accent;
+  }
+  &:hover {
+    &::before {
+      background-color: $color__white;
+    }
+  }
+}
+
+button.prev::before{
+  mask: url('./assets/images/svg/mini-arrow-left.svg');
+}
+
+button.next::before{
+  mask: url('./assets/images/svg/mini-arrow-right.svg');
+}
+
+.columns{
+  display: flex;
+  flex-direction: row;
+  &.start{
+    justify-content: start;
+  }
+  &.between{
+    justify-content: space-between;
+  }
+  &.center {
+    justify-content: center;
+  }
+}

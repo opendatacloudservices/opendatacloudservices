@@ -10,6 +10,7 @@
     "build": "cross-env ELEVENTY_ENV=prod eleventy",
     "seed": "cross-env ELEVENTY_ENV=seed eleventy"
   },
+  "browserslist": "last 2 versions",
   "repository": {
     "type": "git",
     "url": "https://github.com/opendatacloudservices/opendatacloudservices"
@@ -23,12 +24,14 @@
     "dotenv": "^8.0.0",
     "html-minifier": "^4.0.0",
     "luxon": "^1.16.0",
+    "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "postcss": "^8.3.0",
     "postcss-color-mix": "^1.1.0",
     "postcss-comment": "^2.0.0",
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^8.0.0",
+    "postcss-normalize": "^10.0.0",
     "postcss-simple-vars": "^6.0.3",
     "precss": "^3.1.2",
     "uglify-js": "^3.6.0",

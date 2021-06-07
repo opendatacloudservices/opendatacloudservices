@@ -1,6 +1,7 @@
 ---
 title: A post page
 date: 2018-03-21
+locale: en
 ---
 
 There's not much here in the sample post page. Better get to work.

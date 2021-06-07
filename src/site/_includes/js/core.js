@@ -1,10 +1,33 @@
-// simple button click event handler
-function btnHandler(selector, callback) {
-  var btn = document.querySelector(selector);
-  if(!btn) { return; }
-  btn.addEventListener('click', function(event) {
-    event.preventDefault();
-    callback();
-  }, false);
+let lastKnownScrollPosition = 0;
+let ticking = false;
+
+function header(scrollPos) {
+  var header = document.querySelector('header');
+  if (header) {
+    if (scrollPos > 640) {
+      if (header.className === "invert") {
+        header.className = "";
+        setTimeout(function() {
+          document.querySelector('#logo').style.display = 'block';
+        }, 500);
+      }
+    } else {
+      if (header.className !== "invert") {
+        header.className = "invert";
+      }
+    }
+  }
 }
 
+document.addEventListener('scroll', function(e) {
+  lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      header(lastKnownScrollPosition);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
