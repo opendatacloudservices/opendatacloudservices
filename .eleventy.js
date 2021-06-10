@@ -47,14 +47,14 @@ module.exports = function(config) {
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/fonts");
+  config.addPassthroughCopy("./_redirects", "/");
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;
   return {
     dir: {
       input: "src/site",
-      output: "dist",
-      data: `_data/${env}`
+      output: "dist"
     },
     templateFormats : ["njk", "md", "11ty.js"],
     htmlTemplateEngine : "njk",

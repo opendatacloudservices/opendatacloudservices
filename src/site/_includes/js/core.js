@@ -4,7 +4,7 @@ let ticking = false;
 function header(scrollPos) {
   var header = document.querySelector('header');
   if (header) {
-    if (scrollPos > 640) {
+    if (scrollPos > 540) {
       if (header.className === "invert") {
         header.className = "";
         setTimeout(function() {
