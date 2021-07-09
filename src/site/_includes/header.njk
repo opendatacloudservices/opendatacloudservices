@@ -17,20 +17,20 @@
 
       <ul>
         <li>
-          <a class="active" href="/{{ locale }}">Home</a>
+          <a{% if page.url == '/de/' or page.url == '/en/' or page.url == '/' %} class="active"{% endif %} href="/{{ locale }}">Home</a>
         </li>
         <li>
-          <a href="/roadmap/{{ locale }}">Roadmap</a>
+          <a{% if page.url == '/roadmap/de/' or page.url == '/roadmap/en/' or page.url == '/roadmap/' %} class="active"{% endif %} href="/roadmap/{{ locale }}">Roadmap</a>
         </li>
         <li class="prelogin">
-          <a href="/posts/{{ locale }}">Blog</a>
+          <a{% if '/blog/' in page.url %} class="active"{% endif %} href="/posts/{{ locale }}">Blog</a>
         </li>
         <li>
           <a class="button invert" href="https://account.opendataservices.de">Register&nbsp;/&nbsp;Login</a>
         </li>
         <li class="postlogin">
           <a class="lang-link" href="{% if page.url.indexOf('/de') == page.url.length - 4 %}{{ page.url.substr(0, page.url.length - 4) + '/en' }}{% else %}{{ page.url.substr(0, page.url.length - 4) + '/de' }}{% endif %}">
-            {% if local == 'de' %}
+            {% if locale == 'de' %}
             DE&nbsp;/&nbsp;<span class="inactive">EN</span>
             {% else %}
             <span class="inactive">DE</span>&nbsp;/&nbsp;EN

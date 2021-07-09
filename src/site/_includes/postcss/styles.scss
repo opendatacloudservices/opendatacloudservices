@@ -351,6 +351,7 @@ header.invert {
   background: linear-gradient(312.73deg, #4264FB 34.83%, #EB00FF 142.89%);
   overflow:hidden;
   text-align: center;
+  margin-bottom:100px;
   &>div {
     background-image: url('../images/transparent-export-hex-smaller.png');
     background-repeat: no-repeat;
@@ -364,13 +365,15 @@ header.invert {
     color: white;
     text-decoration: underline;
     text-shadow: 0px 0px 15px #704AFD;
-    margin:0;
+    max-width:90%;
+    margin:0 auto;
     padding:0 0 10px 0;
   }
   h2 {
     color: white;
     text-shadow: 0px 0px 15px #704AFD;
-    margin:0;
+    max-width:90%;
+    margin:0 auto;
     padding:0;
   }
 }
@@ -443,13 +446,28 @@ footer {
 }
 
 .feature{
-  margin: 50px;
+  max-width:1200px;
+  margin:100px auto 150px auto;
   display: flex;
   flex-direction: row;
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+    p {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 0;
+    }
+  }
   align-items: center;
+  justify-content: space-around;
   h3{
     @include font__h1;
     margin-bottom:50px;
+  }
+  &.roadmap h3 span {
+    background-color: $color__default-dark;
+    color: $color__default-brighter;
+    padding:2px 8px;
+    display: inline-block;
   }
   p{
     @include font__p-large;
@@ -460,30 +478,176 @@ footer {
     padding:15px;
     display: inline-block;
     max-width:70%;
-    -webkit-box-shadow: 0px 15px 35px 0px rgba(0,0,0,0.15), 0px 4px 10px 0px rgba(0,0,0,0.15); 
     box-shadow: 0px 15px 35px 0px rgba(0,0,0,0.15), 0px 4px 10px 0px rgba(0,0,0,0.15);
+  }
+  &.roadmap p {
+    color: $color__default-dark;
+    background:none;
+    box-shadow: none;
+    padding:0;
+    max-width: 100%;
+  }
+  .button {
+    @include button-bright;
+    @include font__p;
+    float:left;
+    display:flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-top:55px;
+    font-weight:$font__bold;
+    text-decoration: none;
+    background-color: $color__tertiary-medium;
+    color: white;
+    &:hover {
+      cursor: pointer;
+      background-color: $color__tertiary-bright;
+      color: $color__tertiary-medium;
+    }
   }
   div{
     width:50%;
+    max-width:500px;
   }
   div:first-child{
     padding-bottom: 60px;
   }
   div:last-child{
+    max-width:800px;
     text-align: center;
     background-image: url('/images/feature-bg-red.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     img {
-      max-width:50%;
-      max-height:789px;
+      max-width:90%;
+      max-height:400px;
     }
   }
 }
 
+.content {
+  padding-bottom:50px;
+  h3 {
+    @include font__h1;
+    text-align: center;
+    padding: 30px 0 20px;
+  }
+  &>.link-container{
+    padding-top:30px;
+    text-align: center;
+    a {
+      @include button-bright;
+      @include font__p;
+      font-weight: $font__bold;
+      background-color: $color__tertiary-bright;
+      color: $color__tertiary-dark;
+      &:hover{
+        background-color: $color__tertiary-medium;
+        color: white;
+      }
+      display:inline-block;
+      margin: 0 auto;
+      &.invert {
+        @include font__p-large;
+        font-weight: $font__bold;
+        background-color: $color__tertiary-medium;
+        color: white;
+        &:hover{
+          background-color: $color__tertiary-bright;
+          color: $color__tertiary-dark;          
+        }
+      }
+    }
+  }
+  p {
+    @include font__p-large;
+    width: 90%;
+    max-width:710px;
+    margin: 0 auto;
+  }
+  ul, li {
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  li {
+    width: 40%;
+    max-width:600px;
+    margin: 20px 5%;
+    h4 {
+      @include font__h2;
+      padding-bottom:10px;
+    }
+    p {
+      @include font__p;
+      a {
+        color: black;
+        &:hover {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .feature {
+    margin: 50px;
+  }
+}
+
+
 @media screen and (max-width: 960px) {
   .feature{
     flex-direction: column-reverse;
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+    &>div {
+      width: 100%;
+    }
+    div:first-child{
+      padding-top: 60px;
+    }
+  }
+
+  .content {
+    ul {
+      flex-direction: column;
+      li {
+        width: 90%
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #teaser {
+    h1 {
+      @include font__h2;
+    }
+    h2 {
+      @include font__h3;
+    }
+  }
+
+  .feature{
+    h3{
+      @include font__h2;
+      margin-bottom:30px;
+    }
+   p{
+      @include font__p;
+    }
+    .button{
+      margin-top:35px;
+    }
   }
 }

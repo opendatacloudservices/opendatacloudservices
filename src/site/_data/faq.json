@@ -1,0 +1,42 @@
+[
+  {
+    "title": {
+      "de": "Wer steht hinter den Open Data Cloud Services?",
+      "en": "Who is behind the Open Data Cloud Services?"
+    },
+    "content": {
+      "de": "ODCS ist ein Projekt von <a href=\"https://www.sebastianmeier.eu\">Sebastian Meier</a> / <a href=\"https://www.vislab.io\">VISLAB.io</a>. Das Projekt wurde ermöglicht durch eine Förderung des <a href=\"https://www.bmwi.de/Redaktion/DE/Artikel/Innovation/igp.html\">Innovationsprogramm</a> für Geschäftsmodelle und Pionierlösungen des BMVI.",
+      "en": "ODCS is a project by <a href=\"https://www.sebastianmeier.eu\">Sebastian Meier</a> / <a href=\"https://www.vislab.io\">VISLAB.io</a>. The project received an initial funding through the BMVI's <a href=\"https://www.bmwi.de/Redaktion/DE/Artikel/Innovation/igp.html\">innovation program</a> for busines models and novel data-driven solutions."
+    }
+  },
+  {
+    "title": {
+      "de": "Warum noch eine Meta-Plattform?",
+      "en": "Why another meta platform?"
+    },
+    "content": {
+      "de": "Die bisherigen Plattformen enthalten leider nicht alle verfügbaren Daten. Unser System kombiniert die existierenden Lösungen zu einer einheitlichen Plattform.",
+      "en": "The existing individual platforms do not include all the data there is, therefore, our platform combines the data from the existing solution and presents them in a unified platform."
+    }
+  },
+  {
+    "title": {
+      "de": "Warum sind die Open Data Cloud Services kostenlos?",
+      "en": "Why are the Open Data Cloud Services free?"
+    },
+    "content": {
+      "de": "ODCS soll vor allem gesellschaftlichen Mehrwert schaffen. Um die Platform zu finanzieren, werden wir in Zukunft spezielle Geschäftsfunktionen einführen, welche nicht kostenlos seien werden. Die Basisfunktionen werden aber immer kostenlos sein, damit alle Bürger*innen Zugriff auf offene Daten haben.",
+      "en": "ODCS's first and foremost goal is to improve access to open data for everyone. Therefore, the basic features will always be free. To finance our infrastructure we will introduce special business features, which will require payment."
+    }
+  },
+  {
+    "title": {
+      "de": "Open Source?",
+      "en": "Open Source?"
+    },
+    "content": {
+      "de": "Wir stehen für Public Money > Public Code. In unserem <a href=\"https://github.com/opendatacloudservices\">GitHub Account</a> finden sich die wichtigsten Module unserer Anwendung. Einige wenige Repos wie sicherheitsrelevante Repos und unsere urheberrechtlich geschützten Stylesheets sind nicht öffentlich.",
+      "en": "We stand for public money > public code. In our <a href=\"https://github.com/opendatacloudservices\">GitHub account</a> you will find most of our code. Some repositories are not public due to security concerns or for example our copyrighted stylesheets."
+    }
+  }
+]
