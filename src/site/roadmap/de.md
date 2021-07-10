@@ -4,7 +4,7 @@ title: Roadmap
 locale: de
 ---
 <div id="teaser">
-  <div>
+  <div class="cover">
     <h1>Roadmap</h1>
     <h2>Der Weg zu einer einheitlichen Infrastruktur für offene Daten in Deutschland</h2>
   </div>

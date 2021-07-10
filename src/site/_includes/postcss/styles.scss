@@ -360,6 +360,10 @@ header.invert {
     padding-top:350px;
     width:100%;
     height:720px;  
+    &.cover {
+      background-image: url('../images/Network-bg@2x.png');
+      background-size: cover;
+    }
   }
   h1 {
     color: white;

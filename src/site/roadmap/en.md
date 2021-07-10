@@ -5,7 +5,7 @@ locale: en
 ---
 
 <div id="teaser">
-  <div>
+  <div class="cover">
     <h1>Roadmap</h1>
     <h2>Towards a unified infrastructure for Open Data in Germany</h2>
   </div>

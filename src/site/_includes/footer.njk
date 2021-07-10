@@ -12,10 +12,10 @@
   <nav>
     <ul>
       <li>
-        <a href="">Impressum</a>
+        <a href="">{% if locale == 'de' %}Kontakt / Impressum{% else %}Contact / Legal Note{% endif %}</a>
       </li>
       <li>
-        <a href="">Datenschutz</a>
+        <a href="">{% if locale == 'de' %}Datenschutz{% else %}Privacy Statement{% endif %}</a>
       </li>
       <li>
         VISLAB.io&nbsp;&copy;&nbsp;2021

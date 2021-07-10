@@ -2,6 +2,9 @@
 title: Another post page
 date: 2018-03-28
 locale: de
+teaser: a
+teaser_type: a
+abstract: a
 ---
 
 Another simple page.
