@@ -16,26 +16,19 @@
     "url": "https://github.com/opendatacloudservices/opendatacloudservices"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
-    "autoprefixer": "^10.2.6",
-    "axios": "^0.21.1",
-    "cssnano": "^5.0.5",
-    "dotenv": "^8.0.0",
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "cssnano": "^5.0.16",
     "html-minifier": "^4.0.0",
-    "luxon": "^1.16.0",
+    "luxon": "^2.3.0",
     "moment": "^2.29.1",
-    "node-fetch": "^2.6.1",
-    "postcss": "^8.3.0",
+    "postcss": "^8.4.5",
     "postcss-color-mix": "^1.1.0",
-    "postcss-comment": "^2.0.0",
     "postcss-import": "^14.0.2",
-    "postcss-mixins": "^8.0.0",
-    "postcss-normalize": "^10.0.0",
-    "postcss-simple-vars": "^6.0.3",
-    "precss": "^3.1.2",
-    "uglify-js": "^3.6.0",
-    "xml2js": "^0.4.19"
+    "postcss-mixins": "^9.0.1",
+    "postcss-normalize": "^10.0.1",
+    "precss": "^4.0.0",
+    "uglify-js": "^3.15.0"
   },
   "devDependencies": {
     "cross-env": "5.2.0"

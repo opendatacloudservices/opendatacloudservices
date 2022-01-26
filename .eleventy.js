@@ -48,6 +48,7 @@ module.exports = function(config) {
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/fonts");
   config.addPassthroughCopy("./src/site/css");
+  config.addPassthroughCopy({"./src/site/_includes/roots" : "."});
   config.addPassthroughCopy("./_redirects", "/");
 
   // make the seed target act like prod
