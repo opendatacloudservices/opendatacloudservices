@@ -16,7 +16,7 @@
     "url": "https://github.com/opendatacloudservices/opendatacloudservices"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "autoprefixer": "^10.2.6",
     "axios": "^0.21.1",
@@ -33,7 +33,7 @@
     "postcss-mixins": "^8.0.0",
     "postcss-normalize": "^10.0.0",
     "postcss-simple-vars": "^6.0.3",
-    "precss": "^3.1.2",
+    "precss": "^4.0.0",
     "uglify-js": "^3.6.0",
     "xml2js": "^0.4.19"
   },
